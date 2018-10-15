@@ -2,5 +2,7 @@
 
 Sistema de tickets para la gestión del soporte técnico.
 
-[Manual de instalación](./INSTALL.md)
-[Manual de usuario](./docs/MANUAL.md)
+### Documentación
+
+* [Manual de instalación](./INSTALL.md)
+* [Manual de usuario](./docs/MANUAL.md)
