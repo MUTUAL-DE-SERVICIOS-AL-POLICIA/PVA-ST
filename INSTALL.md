@@ -32,3 +32,37 @@ docker container run -ti --restart=always --name zammad --network ldap_default -
 ss -tlnp
 docker network ls
 ```
+
+## Troubleshooting
+
+### Delete a user from database
+
+* Create a console into the zammad docker container
+
+```sh
+docker exec -it zammad /bin/bash
+```
+
+* Within the container console login as zammad user
+
+```sh
+su zammad
+```
+
+* With zammad user create a rails console
+
+```sh
+/opt/zammad/bin/rails console
+```
+
+* Within the rails console find the user
+
+```sh
+user=User.find_by(login: 'djimenez')
+```
+
+* Destroy the user
+
+```sh
+user.destroy
+```
